@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get '/registration', to: 'users#new'
   post '/registration', to: 'users#create'
 
-  resources :dashboard
+  resources :dashboard, :only [:index]
 end
