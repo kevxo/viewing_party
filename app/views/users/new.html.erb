@@ -1,0 +1,22 @@
+<center>
+  <h1>Welcome to Viewing Party</h1>
+  <h4> Please Register for an Account</h4>
+
+  <%= form_with url: '/registration', local: true do  |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %><br>
+
+    <%= form.label :email  %>
+    <%= form.text_field :email %><br>
+
+    <%= form.label :password %>
+    <%= form.text_field :password %><br>
+
+    <%= form.label :password_confrimation %>
+    <%= form.text_field :password_confirmation %><br>
+
+    <%= form.submit 'Register'%>
+  <% end %>
+
+  <%= link_to 'Already Registered? Log in Here', '/' %>
+</center>
