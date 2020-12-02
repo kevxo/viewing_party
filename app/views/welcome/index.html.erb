@@ -1,0 +1,17 @@
+<center>
+  <h2>Welcome to Viewing Party</h2>
+
+  <p>Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friend's.</p>
+
+  <%= form_tag '/login', method: :post do  %>
+    <% label_tag :email %>
+    <%= text_field_tag :email, 'Email' %><br>
+
+    <% label_tag :password %>
+    <%= password_field_tag :password, 'Password' %><br><br>
+
+    <%= submit_tag "Log In" %>
+  <% end %><br><br>
+
+  <%= link_to "New to Viewing Party? Register Here", '/registration' %>
+</center>
