@@ -27,5 +27,13 @@ describe 'as an authenticated user' do
         expect(page).to have_content("Viewing Parties")
       end
     end
+
+    it "should redirect to discover page when I click on 'Discover Movies'" do
+      visit '/dashboard'
+
+      click_button('Discover Movies')
+
+      expect(current_path).to eq('/discover')
+    end
   end
 end
