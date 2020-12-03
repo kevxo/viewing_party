@@ -1,0 +1,13 @@
+<center>
+  <h2>Welcome <%= current_user.name %>!</h2>
+
+  <%= button_to 'Top 40 Movies', '#', method: :get %>
+
+  <h4>OR</h4>
+
+  <%= form_with url: '#', local: true do |f| %>
+    <%= f.label :search_title %>
+    <%= f.text_field :search_title, value: 'Search by Movie Title' %>
+    <%= f.submit 'Find Movies', method: :get %>
+  <% end %>
+</center>
