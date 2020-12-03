@@ -2,14 +2,19 @@ require 'rails_helper'
 
 describe 'as an authenticated user' do
   before (:each) do
-    @user = create(:user)
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+    visit '/registration'
+
+    fill_in :name, with: 'Kevin'
+    fill_in :email, with: 'kev123@example.com'
+    fill_in :password, with: 'passwordsecure'
+    fill_in :password_confirmation, with: 'passwordsecure'
+    click_button 'Register'
   end
   describe 'when I visit /dashboard' do
     it 'I see a welcome message, a button to discover movies, a friends section, and a viewing parties section' do
       visit '/dashboard'
 
-      expect(page).to have_content("Welcome #{@user.name}!")
+      expect(page).to have_content("Welcome Kevin!")
       expect(page).to have_button("Discover Movies")
 
       within('.friends') do
