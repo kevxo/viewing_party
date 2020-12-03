@@ -1,0 +1,18 @@
+<center>
+  <h2>Welcome <%= current_user.name %>!</h2>
+  <%= button_to "Discover Movies", "#" %>
+</center>
+
+<section class="friends">
+  <h4>Friends</h4>
+  <%= form_with url: "#", local: true do |f| %>
+    <% f.label :email %>
+    <%= f.text_field :email, value: "Friend's Email" %>
+
+    <%= f.submit "Add Friend" %>
+  <% end %>
+</section>
+
+<section class="viewing_parties">
+  <h4>Viewing Parties</h4>
+</section>
