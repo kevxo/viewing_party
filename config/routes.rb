@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post '/registration', to: 'users#create'
 
   resources :dashboard, only: [:index]
+  resources :discover, only: [:index]
 end
