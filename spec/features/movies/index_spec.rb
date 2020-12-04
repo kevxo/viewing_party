@@ -36,7 +36,7 @@ describe "as an authenticated user" do
 
       expect(current_path).to eq('/movies')
 
-      expect(page).to have_css('.results', count: 16)
+      expect(page).to have_css('.results', count: 17)
     end
   end
 end
