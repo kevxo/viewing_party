@@ -1,0 +1,23 @@
+<head>
+  <style>
+    button {display: inline-block;}
+    form {display: inline-block;}
+  </style>
+</head>
+
+<center>
+  <h2>Welcome <%= current_user.name %>!</h2>
+  <%= button_to 'Top 40 Movies', '/movies', method: :get %>
+  <%= form_with url: '/movies', method: :get, local: true do |f| %>
+
+  <%= f.text_field :search_title, value: 'Search by Movie Title' %>
+  <%= f.submit 'Find Movies' %>
+  <% end %>
+
+  <% @movies.flatten.each do |movie| %>
+    <section class='results'>
+      <p style="display:inline-block;", class="name"><%= link_to movie[:original_title] %></p>
+      <p style="display:inline-block;", class="vote_average">Vote Average: <%= movie[:vote_average] %></p><br>
+    </section>
+  <% end %>
+</center>
