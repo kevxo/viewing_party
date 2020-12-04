@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   before_action :require_user
   def index
-    conn = Faraday.new("https://api.themoviedb.org")
+    conn = Faraday.new('https://api.themoviedb.org')
 
     if params[:search_title]
       response = conn.get("/3/search/movie?api_key=#{ENV['MOVIE_API_KEY']}&language=en-US&page=1&include_adult=false&query=#{params[:search_title]}")
