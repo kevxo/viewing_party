@@ -6,11 +6,19 @@
 
 <section class="friends">
   <h4>Friends</h4>
-  <%= form_with url: "#", local: true do |f| %>
+  <%= form_with url: "/friendships", local: true do |f| %>
     <% f.label :email %>
     <%= f.text_field :email, value: "Friend's Email" %>
 
     <%= f.submit "Add Friend" %>
+  <% end %>
+
+  <% if !current_user.friends.empty? %>
+    <% current_user.friends.each do |friend| %>
+      <%= friend.name %>
+    <% end %>
+  <% else %>
+    <%= "You currently have no friends" %>
   <% end %>
 </section>
 
