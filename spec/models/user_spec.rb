@@ -10,5 +10,10 @@ RSpec.describe User, type: :model do
       user1 = create(:user)
       expect(user1).to be_valid
     end
+
+    describe 'relationships' do
+      it { should have_many :friendships }
+      it { should have_many(:friends).through(:friendships) }
+    end
   end
 end
