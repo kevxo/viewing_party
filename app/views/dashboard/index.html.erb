@@ -1,6 +1,7 @@
 <center>
   <h2>Welcome <%= current_user.name %>!</h2>
   <%= button_to "Discover Movies", "/discover", method: :get %>
+  <%= link_to "Click Here to Logout", "/logout", method: :delete %>
 </center>
 
 <section class="friends">
