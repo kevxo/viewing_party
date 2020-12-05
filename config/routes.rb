@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :dashboard, only: [:index]
   resources :discover, only: [:index]
   resources :movies, only: [:index, :show]
+  resources :friendships, only: [:create]
 end
