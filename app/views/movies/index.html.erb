@@ -16,7 +16,7 @@
 
   <% @movies.flatten.each do |movie| %>
     <section class='results'>
-      <p style="display:inline-block;", class="name"><%= link_to movie[:original_title] %></p>
+      <p style="display:inline-block;", class="name"><%= link_to movie[:original_title], "/movies/#{movie[:id]}" %></p>
       <p style="display:inline-block;", class="vote_average">Vote Average: <%= movie[:vote_average] %></p><br>
     </section>
   <% end %>
