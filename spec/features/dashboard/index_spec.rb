@@ -81,5 +81,20 @@ describe 'as an authenticated user' do
 
       expect(page).to have_content("Already friends with that user")
     end
+
+    it 'I can see all friends including inverse friendships' do
+      @first_user.friendships.create!(friend_id: @user_list.second.id)
+      @first_user.friendships.create!(friend_id: @user_list.third.id)
+
+      @user_list.fourth.friendships.create!(friend_id: @first_user.id)
+
+      visit '/dashboard'
+
+      within(".friends") do
+        expect(page).to have_content("#{@user_list.second.name}")
+        expect(page).to have_content("#{@user_list.third.name}")
+        expect(page).to have_content("#{@user_list.fourth.name}")
+      end
+    end
   end
 end
