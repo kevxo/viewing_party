@@ -4,23 +4,22 @@
   <h3>Viewing Party Details</h3>
 
   <%= form_with url: '/viewing_party', local: true do |f| %>
-    <%= f.label :title, "Movie title: #{params[:title]}" %><br>
-    <%= f.hidden_field :title, value: params[:title] %>
+    <%= f.label :movie_title, "Movie title: #{params[:title]}" %><br>
+    <%= f.hidden_field :movie_title, value: params[:title] %>
 
     <%= f.label :duration, 'Duration of Party' %>
     <%= f.text_field :duration, value: params[:duration] %><br>
 
-    <%= f.label :day, 'Day' %>
-    <%= f.date_field :day %><br>
+    <%= f.label :date, 'Day' %>
+    <%= f.date_field :date %><br>
 
-    <%= f.label :time, 'Start Time' %>
-    <%= f.time_field :time %>
+    <%= f.label :start_time, 'Start Time' %>
+    <%= f.time_field :start_time %>
 
     <h3>Include</h3>
 
-    <%= collection_check_boxes(:user, :id, current_user.friends, :id, :name, include_hidden: false ) %>
+    <%= collection_check_boxes(:guests, :id, current_user.friends, :id, :name, include_hidden: false ) %>
 
     <%= f.submit 'Create Party' %>
   <% end %>
 </center>
-
