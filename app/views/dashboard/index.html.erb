@@ -24,4 +24,20 @@
 
 <section class="viewing_parties">
   <h4>Viewing Parties</h4>
+  <% if !current_user.parties.empty? %>
+    <% current_user.parties.each do |party| %>
+      <p><%= party.movie_title %></p>
+      <p><%= party.date %></p>
+      <p><%= party.start_time %></p>
+      <p>Hosting</p>
+    <% end %>
+  <% end %>
+  <% if !current_user.parties_invited_to.empty? %>
+    <% current_user.parties_invited_to.each do |party| %>
+      <p><%= party.movie_title %></p>
+      <p><%= party.date %></p>
+      <p><%= party.start_time %></p>
+      <p>Invited</p>
+    <% end %>
+  <% end %>
 </section>
