@@ -13,8 +13,8 @@
     <%= f.submit "Add Friend" %>
   <% end %>
 
-  <% if !current_user.friends.empty? %>
-    <% current_user.friends.each do |friend| %>
+  <% if !@friends.empty? %>
+    <% @friends.each do |friend| %>
       <%= friend.name %>
     <% end %>
   <% else %>
