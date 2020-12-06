@@ -7,7 +7,7 @@
 
 <center>
   <h2> Welcome <%= current_user.name %>! </h2>
-  <%= button_to 'Create Viewing Party for Movie', "#" %>
+  <%= button_to 'Create Viewing Party for Movie', "/viewing_party/new", method: :get, params: {title: @movie[:title], duration: @movie[:runtime]} %>
 
   <section class='movie-details'>
     <div class="title">
