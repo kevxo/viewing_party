@@ -1,22 +1,85 @@
-# Viewing Party
+# [Viewing Party](https://viewing-party-2008.herokuapp.com/)
 
-This is the base repo for the [viewing party project](https://backend.turing.io/module3/projects/viewing_party) used for Turing's Backend Module 3.
+Viewing Party is an application with a focus on API consumption that was created utilizing the [viewing party project](https://backend.turing.io/module3/projects/viewing_party) base repo as part of the Turing School of Software and Design Backend Module 3 cirriculum.
 
-### About this Project
+## Table of Contents
+1. [About This Project](#about_this_project)
+2. [Local Setup](#local_setup)
+3. [Testing](#testing)
+4. [Deployment](#deployment)
+5. [Schema Design](#schema)
+6. [Development Team](#development_team)
+7. [Learning Achievements](#achievements)
 
-Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friend's.
+## About This Project <a name="about_this_project"></a>
 
-## Local Setup
+Viewing party is an application in which users can explore movies, add friends, and create parties to watch movies together! Users can search for a specific movie or they can explore a list of the current top movies. A user can click on a chosen movie's title to be taken to a details page to learn more about that movie including information about the runtime, genre, cast members, and reviews. 
 
-1. Fork and Clone the repo
-2. Install gem packages: `bundle install`
-3. Setup the database: `rails db:create`
+Once a user has chosen a movie, and selected friend's they would like to invite, the user can create a viewing party on a given date, at a specific start time, and for a given duration! 
 
+## Local Setup <a name="local_setup"></a>
 
-## Versions
-
-- Ruby 2.5.3
-
+This project requires: 
+- Ruby 2.5.3.
 - Rails 5.2.4.3
 
-Example wireframes to follow are found [here](https://backend.turing.io/module3/projects/viewing_party/wireframes)
+* Fork this repository
+* Clone your fork
+* From the command line, install gems and set up your DB:
+    * `bundle install`
+    * `rails db:create`
+    * `rails db:migrate`
+* Install Figaro with `bundle exec figaro install` to create an application.yml file locally
+* Secure an API key from [TheMovieDB API](https://developers.themoviedb.org/3/getting-started/introduction)
+* Add your API key to the application.yml file (/config/application.yml): `MOVIE_API_KEY: <your API key>` 
+
+## Testing <a name="testing"></a>
+
+Run the test suite with `bundle exec rspec`
+
+#### Viewing Party utilizes the following gems and libraries in testing:
+
+- [VCR](https://github.com/vcr/vcr) 
+- [WebMock](https://github.com/bblimke/webmock)
+- [FactoryBot](https://github.com/thoughtbot/factory_bot/blob/master/GETTING_STARTED.md)
+- [Faker](https://github.com/faker-ruby/faker)
+- [ShouldaMatchers](https://github.com/thoughtbot/shoulda-matchers)
+- [Capybara](https://github.com/teamcapybara/capybara)
+- [SimpleCov](https://github.com/simplecov-ruby/simplecov)
+
+## Deployment <a name="deployment"></a>
+
+This app utilizes [Travis CI](travis-ci.com) for integrated testing (NOTE - badge here??)
+
+For local deployment run your development server with `rails s` and visit [localhost:3000](http://localhost:3000) to see the app in action.
+
+[Viewing Party](https://viewing-party-2008.herokuapp.com/) is deployed remotely via Heroku (NOTE - is there a heroku badge?)
+
+## Schema <a name="schema"></a>
+
+Schema here!
+
+## Development Team <a name="development_team"></a>
+
+[Jesse Mellinger](https://github.com/JesseMellinger)
+
+[Kevin Cuadros](https://github.com/kevxo)
+
+[Chris Allbritton](https://github.com/callbritton)
+
+#### The team utilized the following resources for build out: 
+
+[TheMovieDB API](https://developers.themoviedb.org/3/getting-started/introduction)
+
+[User stories](https://github.com/Callbritton/viewing_party/projects/1)
+
+[Example wireframes](https://backend.turing.io/module3/projects/viewing_party/wireframes)
+
+## Learning Achievements <a name="achievements"></a>
+
+- Build an application that requires basic authentication
+- Consume JSON APIs that require authentication
+- Implement self-refential relationships in ActiveRecord
+- Utilize continuous Integration using Travis CI
+- Apply RuboCop’s style guide for code quality
+- Deploy remotely (Heroku)
