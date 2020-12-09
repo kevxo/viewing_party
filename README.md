@@ -49,7 +49,7 @@ Run the test suite with `bundle exec rspec`
 
 ## Deployment <a name="deployment"></a>
 
-This app utilizes [Travis CI](travis-ci.com) for integrated testing (NOTE - badge here??)
+This app utilizes [Travis CI](travis-ci.com) for integrated testing [![Build Status](https://travis-ci.com/JesseMellinger/viewing_party.svg?branch=main)](https://travis-ci.com/JesseMellinger/viewing_party)
 
 For local deployment run your development server with `rails s` and visit [localhost:3000](http://localhost:3000) to see the app in action.
 
