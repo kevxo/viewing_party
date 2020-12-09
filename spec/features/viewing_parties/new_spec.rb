@@ -112,7 +112,7 @@ describe 'As a authenticated user' do
       fill_in :start_time,	with: '10:15'
 
       click_button 'Create Party'
-
+      
     end
   end
 end

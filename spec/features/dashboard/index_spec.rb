@@ -5,8 +5,9 @@ describe 'as an authenticated user' do
     @user_list = create_list(:user, 5)
     @first_user = @user_list.first
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@first_user)
+    @party = create(:party, user_id: @first_user.id, movie_title: "The Shawshank Redemption", movie_id: "278")
   end
-  describe 'when I visit /dashboard' do
+  describe 'when I visit /dashboard', :vcr do
     it 'I see a welcome message, a button to discover movies, a friends section, and a viewing parties section' do
       visit '/dashboard'
 
@@ -21,7 +22,13 @@ describe 'as an authenticated user' do
 
       within('.viewing_parties') do
         expect(page).to have_content("Viewing Parties")
+        expect(page).to have_content("#{@party.duration}")
+        expect(page).to have_content("#{@party.date}")
+        expect(page).to have_content("#{@party.start_time}")
+        click_link("#{@party.movie_title}")
       end
+
+      expect(current_path).to eq("/movies/#{@party.movie_id}")
     end
 
     it 'I can add a friend if that user is a registered user of the application' do
