@@ -34,7 +34,7 @@ This project requires:
 * Add your API key to the application.yml file (/config/application.yml): `MOVIE_API_KEY: <your API key>` 
 
 ## Testing <a name="testing"></a>
-
+Test Coverage: [![Coverage](https://JesseMellinger.github.io/viewing_party/badge.svg)](https://github.com/JesseMellinger/viewing_party)
 Run the test suite with `bundle exec rspec`
 
 #### Viewing Party utilizes the following gems and libraries in testing:
