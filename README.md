@@ -57,7 +57,7 @@ For local deployment run your development server with `rails s` and visit [local
 
 ## Schema <a name="schema"></a>
 
-Schema here!
+<img width="998" alt="viewing_party_2008_schema" src="https://user-images.githubusercontent.com/63476564/101641967-6bec6e80-3a00-11eb-8e0b-65e5d3d94894.png">
 
 ## Development Team <a name="development_team"></a>
 
