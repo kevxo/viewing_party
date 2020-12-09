@@ -37,6 +37,11 @@ describe "as an authenticated user" do
       expect(current_path).to eq('/movies')
 
       expect(page).to have_css('.results', count: 17)
+
+      within(first('.results')) do
+        expect(page).to have_content("Interstellar")
+        expect(page).to have_content("Vote Average: 8.3")
+      end
     end
   end
 end

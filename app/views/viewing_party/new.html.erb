@@ -8,7 +8,7 @@
     <%= f.hidden_field :movie_title, value: params[:title] %>
 
     <%= f.label :duration, 'Duration of Party' %>
-    <%= f.text_field :duration, value: params[:duration] %><br>
+    <%= f.number_field :duration, placeholder: params[:duration], :min => params[:duration].to_i, :max => 999 %><br>
 
     <%= f.label :date, 'Day' %>
     <%= f.date_field :date %><br>
