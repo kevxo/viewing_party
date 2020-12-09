@@ -1,6 +1,6 @@
 # [Viewing Party](https://viewing-party-2008.herokuapp.com/)
 
-Viewing Party is an application with a focus on API consumption that was created utilizing the [viewing party project](https://backend.turing.io/module3/projects/viewing_party) base repo as part of the Turing School of Software and Design Backend Module 3 cirriculum.
+Viewing Party is an application with a focus on API consumption that was created utilizing the viewing party project [base repo](https://backend.turing.io/module3/projects/viewing_party) as part of the Turing School of Software and Design Backend Module 3 cirriculum.
 
 ## Table of Contents
 1. [About This Project](#about_this_project)
