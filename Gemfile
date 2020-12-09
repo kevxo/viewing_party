@@ -32,6 +32,7 @@ group :development do
 end
 
 group :test do
+  gem 'simplecov-shields-badge', require: false
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
