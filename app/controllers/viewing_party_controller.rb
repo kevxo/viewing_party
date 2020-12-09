@@ -14,6 +14,6 @@ class ViewingPartyController < ApplicationController
   private
 
   def party_params
-    params.permit(:movie_title, :duration, :date, :start_time)
+    params.permit(:movie_title, :duration, :date, :start_time, :movie_id)
   end
 end
