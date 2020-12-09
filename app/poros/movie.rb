@@ -17,7 +17,6 @@ class Movie
   def genres
     @genres.map do |genre|
       genre[:name]
-      require "pry"; binding.pry
     end
   end
 end
