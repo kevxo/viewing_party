@@ -13,7 +13,7 @@
   <%= f.text_field :search_title, placeholder: 'Search by Movie Title' %>
   <%= f.submit 'Find Movies' %>
   <% end %>
-
+  <br><br>
   <% @movies.each do |movie| %>
     <section class='results'>
       <p style="display:inline-block;", class="name"><%= link_to movie.title, "/movies/#{movie.id}" %></p>
