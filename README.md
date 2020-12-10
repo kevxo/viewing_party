@@ -17,6 +17,14 @@ Viewing party is an application in which users can explore movies, add friends, 
 
 Once a user has chosen a movie, and selected friend's they would like to invite, the user can create a viewing party on a given date, at a specific start time, and for a given duration! 
 
+#### Top 40 Movies:
+
+<img width="777" alt="viewing_party_2008_movies" src="https://user-images.githubusercontent.com/63476564/101775966-40c85480-3abe-11eb-86de-8b8c6b0aa241.png">
+
+#### Movie Details: 
+
+<img width="778" alt="shawhank_movie_show" src="https://user-images.githubusercontent.com/63476564/101776107-72412000-3abe-11eb-840b-5ce7170ef0fe.png">
+
 ## Local Setup <a name="local_setup"></a>
 
 This project requires: 
@@ -35,6 +43,8 @@ This project requires:
 
 ## Testing <a name="testing"></a>
 
+This app utilizes [Travis CI](travis-ci.com) for integrated testing [![Build Status](https://travis-ci.com/JesseMellinger/viewing_party.svg?branch=main)](https://travis-ci.com/JesseMellinger/viewing_party)
+
 Run the test suite with `bundle exec rspec`
 
 #### Viewing Party utilizes the following gems and libraries in testing:
@@ -48,8 +58,6 @@ Run the test suite with `bundle exec rspec`
 - [SimpleCov](https://github.com/simplecov-ruby/simplecov)
 
 ## Deployment <a name="deployment"></a>
-
-This app utilizes [Travis CI](travis-ci.com) for integrated testing [![Build Status](https://travis-ci.com/JesseMellinger/viewing_party.svg?branch=main)](https://travis-ci.com/JesseMellinger/viewing_party)
 
 For local deployment run your development server with `rails s` and visit [localhost:3000](http://localhost:3000) to see the app in action.
 
