@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'faraday'
 gem 'figaro'
+gem 'turbolinks', '~> 5'
 gem 'bootstrap', '~> 4.4.1'
 
 group :development, :test do
