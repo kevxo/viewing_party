@@ -1,9 +1,10 @@
 <center>
   <h2>Welcome <%= current_user.name %>!</h2>
-  <%= button_to "Discover Movies", "/discover", method: :get %>
   <%= link_to "Click Here to Logout", "/logout", method: :delete %>
+  <br><br>
+  <%= button_to "Discover Movies", "/discover", method: :get %>
 </center>
-
+  <br>
 <section class="friends">
   <h4>Friends</h4>
   <%= form_with url: "/friendships", local: true do |f| %>
@@ -15,13 +16,14 @@
 
   <% if !@friends.empty? %>
     <% @friends.each do |friend| %>
-      <%= friend.name %>
+      <p><%= friend.name %></p>
     <% end %>
   <% else %>
+  <br>
     <%= "You currently have no friends" %>
   <% end %>
 </section>
-
+<br>
 <section class="viewing_parties">
   <h4>Viewing Parties</h4>
   <% if !current_user.parties.empty? %>
