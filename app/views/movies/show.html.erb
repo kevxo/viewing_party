@@ -14,6 +14,10 @@
       <h2><%= @movie.title %></h2>
     </div>
 
+    <div class="image">
+    <%= image_tag("#{@image.path}", :alt => "Movie Poster") %>
+      </div></br>
+
     <div class="vote">
       Vote Average: <%= @movie.vote_average %>
     </div>
@@ -23,7 +27,7 @@
     </div>
 
     <div class="genre">
-      Genre(s):<%= @movie.genres %>
+      Genre(s): <%= @movie.genres %>
     </div>
 
     <hr>
@@ -48,6 +52,5 @@
         <p><%= review.content %></p>
     </div>
     <% end %>
-
 </section>
 </center>

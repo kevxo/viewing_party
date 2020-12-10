@@ -24,7 +24,7 @@ RSpec.describe Movie do
 
   describe '#instance_methods' do
     it 'genres' do
-      expected = ["Drama", "Crime"]
+      expected = "Drama, Crime"
 
       expect(@movie.genres).to eq(expected)
     end
