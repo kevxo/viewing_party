@@ -2,9 +2,9 @@
   <h2>Welcome <%= current_user.name %>!</h2>
 
   <%= button_to 'Top 40 Movies', '/movies', method: :get %>
-
+  <br>
   <h4>OR</h4>
-
+  <br>
   <%= form_with url: '/movies', method: :get, local: true do |f| %>
     <%= f.label :search_title %>
     <%= f.text_field :search_title, placeholder: 'Search by Movie Title' %>
