@@ -19,7 +19,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'faraday'
 gem 'figaro'
 gem 'bootstrap', '~> 4.4.1'
-
+gem 'mini_racer', platforms: :ruby
 
 group :development, :test do
   gem 'pry'
