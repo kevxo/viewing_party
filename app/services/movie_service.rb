@@ -25,6 +25,11 @@ class MovieService
     pages
   end
 
+  def self.get_images(movie_id)
+    response = conn.get("/3/movie/#{movie_id}/images?&language=en-US&include_image_language=en%2Cnull")
+    parse_results(response)[:posters]
+  end
+
   def self.movie_by_id(movie_id)
     response = conn.get("/3/movie/#{movie_id}?&language=en-US")
     parse_results(response)
