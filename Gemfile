@@ -18,7 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'faraday'
 gem 'figaro'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.4.1'
 
 group :development, :test do
   gem 'pry'

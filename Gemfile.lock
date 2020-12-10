@@ -52,7 +52,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.7)
       msgpack (~> 1.0)
-    bootstrap (4.5.3)
+    bootstrap (4.4.1)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
@@ -296,7 +296,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
-  bootstrap
+  bootstrap (~> 4.4.1)
   capybara
   coffee-rails (~> 4.2)
   factory_bot_rails
