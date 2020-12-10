@@ -19,7 +19,7 @@ Once a user has chosen a movie, and selected friend's they would like to invite,
 
 #### Top 40 Movies:
 
-<img width="777" alt="viewing_party_2008_movies" src="https://user-images.githubusercontent.com/63476564/101775966-40c85480-3abe-11eb-86de-8b8c6b0aa241.png">
+<img width="778" alt="movies_show_page_reduced_opacity" src="https://user-images.githubusercontent.com/63476564/101782315-d962d280-3ac6-11eb-83c8-5c84a7de2679.png">
 
 #### Movie Details: 
 
