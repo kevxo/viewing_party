@@ -2,10 +2,10 @@
   <h1>Welcome <%= current_user.name %></h1>
 
   <h3>Viewing Party Details</h3>
-
   <%= form_with url: '/viewing_party', local: true do |f| %>
     <%= f.label :movie_title, "Movie title: #{params[:title]}" %><br>
     <%= f.hidden_field :movie_title, value: params[:title] %>
+    <%= f.hidden_field :movie_id, value: params[:id] %>
 
     <%= f.label :duration, 'Duration of Party' %>
     <%= f.number_field :duration, placeholder: params[:duration], :min => params[:duration].to_i, :max => 999 %><br>

@@ -35,7 +35,7 @@
   <% end %>
   <% if !current_user.parties_invited_to.empty? %>
     <% current_user.parties_invited_to.each do |party| %>
-      <p>Title: <%= party.movie_title %></p>
+    <%= link_to "Title: #{party.movie_title}", "/movies/#{party.movie_id}" %>
       <p>Duration: <%= party.duration %></p>
       <p>Date: <%= party.date %></p>
       <p>Start time: <%= party.start_time %></p>
