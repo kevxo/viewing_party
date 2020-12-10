@@ -1,16 +1,14 @@
 class MovieFacade
   def self.movies(search_title = nil)
-    if search_title
-      search_json = MovieService.movies_by_title(search_title, 40)
-      search_json.map do |movie_data|
-        Movie.new(movie_data)
-      end
-    else
-      top_40_json = MovieService.most_popular(40)
-      top_40_json.map do |movie_data|
-        Movie.new(movie_data)
-      end
+    json = search_title ? MovieService.movies_by_title(search_title, 40) : MovieService.most_popular(40)
+    json.map do |movie_data|
+      Movie.new(movie_data)
     end
+  end
+
+  def self.image(movie_id)
+    image_data = MovieService.get_images(movie_id)
+    Image.new(image_data.first)
   end
 
   def self.movie(movie_id)
