@@ -4,19 +4,38 @@
     <title>ViewingParty</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <main>
-      <% flash.each do |name, msg| %>
-          <div class= "<%=name%>-flash">
-            <center><%= msg %></center>
+      <div class="image-wrapper">
+        <img src="https://st2.depositphotos.com/1031174/10987/i/600/depositphotos_109877990-stock-photo-film-strips-background.jpg" alt="">
+      </div>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+          <div class="navbar-nav">
+            <% if current_user %>
+              <%= link_to "Your Dashboard", '/dashboard', class: "nav-link" %>
+              <%= link_to "Explore Movies", '/movies', class: "nav-link" %>
+              <%= link_to "Log Out", '/logout', method: 'delete', class: "nav-link"%>
+            <% else %>
+              <%= link_to "Welcome", '/', class: "nav-link" %>
+              <%= link_to "Register as a user", registration_path, class: "nav-link" %>
+              <%= link_to "Log In", "/login", class: "nav-link" %>
+            <% end %>
           </div>
+        </div>
+      </nav>
+      <% flash.each do |type, msg| %>
+        <div class="<%= "alert alert-#{type}" %>">
+          <%= msg %>
+        </div>
       <% end %>
-
-      <%= yield %>
+      <div class="container">
+        <%= yield %>
+      </div>
     </main>
     <footer>
       <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="The MovieDB Logo" width="75px" style="margin:10px" >

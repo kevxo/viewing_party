@@ -79,5 +79,20 @@ describe MovieService do
         expect(first_result[:character]).to be_a(String)
       end
     end
+
+    context ".get_image" do
+      it "returns the movie poster", :vcr do
+        movie_service = MovieService.get_images("278")
+
+        expect(movie_service).to be_a(Array)
+        expect(movie_service.first).to be_a(Hash)
+
+        first_result = movie_service[0]
+        expect(first_result).to have_key(:file_path)
+        expect(first_result[:file_path]).to be_a(String)
+        expect(first_result).to have_key(:width)
+        expect(first_result[:width]).to be_a(Integer)
+      end
+    end
   end
 end

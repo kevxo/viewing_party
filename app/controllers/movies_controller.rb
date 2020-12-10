@@ -10,5 +10,6 @@ class MoviesController < ApplicationController
     @movie = MovieFacade.movie(movie_id)
     @reviews = MovieFacade.reviews(movie_id)
     @cast = MovieFacade.cast(movie_id)
+    @image = MovieFacade.image(movie_id)
   end
 end

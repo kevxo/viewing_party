@@ -17,7 +17,7 @@ describe 'as an authenticated user' do
       within('.friends') do
         expect(page).to have_content("Friends")
         expect(page).to have_button("Add Friend")
-        expect(page).to have_field(:email, :with => "Friend's Email")
+        expect(page).to have_field(:email, :placeholder => "Friend's Email")
       end
 
       within('.viewing_parties') do

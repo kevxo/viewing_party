@@ -3,6 +3,10 @@ require 'rails_helper'
 describe "As an authenticated user, when I visit the movie's detail page" do
   before :each do
     @user = create(:user)
+    image_data = {
+      :file_path => "/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
+    }
+    @image = Image.new(image_data)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
   end
 
@@ -45,5 +49,15 @@ describe "As an authenticated user, when I visit the movie's detail page" do
       expect(reviews).to_not be_empty
       expect(page).to have_content("6 Reviews")
     end
+  end
+
+  it 'has a movie poster present', :vcr do
+    visit '/discover'
+    click_button("Top 40 Movies")
+    expect(current_path).to eq('/movies')
+    click_link("The Shawshank Redemption")
+
+    expect(current_path).to eq("/movies/278")
+    expect(page).to have_xpath("//img[contains(@src,'#{@image.path}')]")
   end
 end

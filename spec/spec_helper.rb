@@ -14,13 +14,10 @@
 #
 require 'simplecov'
 SimpleCov.start 'rails' do
-  add_filter "/app/channels/"
-  add_filter "/app/mailers/"
-  add_filter "/app/jobs/"
+  add_filter "channels/"
+  add_filter "mailers/"
+  add_filter "jobs/"
 end
-
-require 'shields_badge'
-SimpleCov.formatter = SimpleCov::Formatter::ShieldsBadge
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
